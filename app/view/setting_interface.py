@@ -1,28 +1,24 @@
 # coding:utf-8
-from qfluentwidgets import (SwitchSettingCard, FolderListSettingCard,
-                            OptionsSettingCard, PushSettingCard,
-                            HyperlinkCard, PrimaryPushSettingCard, ScrollArea,
-                            ComboBoxSettingCard, ExpandLayout, Theme, CustomColorSettingCard,
-                            setTheme, setThemeColor, isDarkTheme, setFont)
-from qfluentwidgets import FluentIcon as FIF
-from qfluentwidgets import SettingCardGroup as CardGroup
-from qfluentwidgets import InfoBar
-from PyQt5.QtCore import Qt, pyqtSignal, QUrl, QStandardPaths
+from PyQt5.QtCore import Qt, QUrl
 from PyQt5.QtGui import QDesktopServices, QFont
-from PyQt5.QtWidgets import QWidget, QLabel, QFileDialog
+from PyQt5.QtWidgets import QWidget, QLabel
+from qfluentwidgets import FluentIcon as FIF, PushSettingCard
+from qfluentwidgets import InfoBar
+from qfluentwidgets import SettingCardGroup as CardGroup
+from qfluentwidgets import (SwitchSettingCard, HyperlinkCard, PrimaryPushSettingCard, ScrollArea,
+                            ComboBoxSettingCard, ExpandLayout, setTheme, setFont)
 
-from ..common.config import cfg, isWin11
-from ..common.setting import HELP_URL, FEEDBACK_URL, AUTHOR, VERSION, YEAR
-from ..common.signal_bus import signalBus
-from ..common.style_sheet import StyleSheet
+from app.common.config import cfg, isWin11
+from app.common.setting import HELP_URL, FEEDBACK_URL, AUTHOR, VERSION, YEAR
+from app.common.signal_bus import signalBus
+from app.common.style_sheet import StyleSheet
 
 
 class SettingCardGroup(CardGroup):
 
-   def __init__(self, title: str, parent=None):
-       super().__init__(title, parent)
-       setFont(self.titleLabel, 14, QFont.Weight.DemiBold)
-
+    def __init__(self, title: str, parent=None):
+        super().__init__(title, parent)
+        setFont(self.titleLabel, 14, QFont.Weight.DemiBold)
 
 
 class SettingInterface(ScrollArea):
@@ -35,6 +31,21 @@ class SettingInterface(ScrollArea):
 
         # setting label
         self.settingLabel = QLabel(self.tr("Settings"), self)
+
+        self.runtimeGroup = SettingCardGroup(
+            self.tr('Runtime'), self.scrollWidget)
+        self.javaCard = PushSettingCard(
+            text=self.tr('Select'),
+            icon=FIF.HELP,
+            title=self.tr('Select Java Path'),
+            content=self.tr('Use your local Java Environment\n(May cause some tools to fail to run)')
+        )
+        self.pythonCard = PushSettingCard(
+            text=self.tr('Select'),
+            icon=FIF.HELP,
+            title=self.tr('Select Python Path'),
+            content=self.tr('Use your local Python Environment\n(May cause some tools to fail to run)')
+        )
 
         # personalization
         self.personalGroup = SettingCardGroup(
@@ -141,6 +152,9 @@ class SettingInterface(ScrollArea):
     def __initLayout(self):
         self.settingLabel.move(36, 50)
 
+        self.runtimeGroup.addSettingCard(self.javaCard)
+        self.runtimeGroup.addSettingCard(self.pythonCard)
+
         self.personalGroup.addSettingCard(self.micaCard)
         self.personalGroup.addSettingCard(self.themeCard)
         self.personalGroup.addSettingCard(self.zoomCard)
@@ -155,6 +169,7 @@ class SettingInterface(ScrollArea):
         # add setting card group to layout
         self.expandLayout.setSpacing(28)
         self.expandLayout.setContentsMargins(36, 10, 36, 0)
+        self.expandLayout.addWidget(self.runtimeGroup)
         self.expandLayout.addWidget(self.personalGroup)
         self.expandLayout.addWidget(self.updateSoftwareGroup)
         self.expandLayout.addWidget(self.aboutGroup)

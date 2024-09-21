@@ -1,17 +1,17 @@
 # coding: utf-8
-from PyQt5.QtCore import QUrl, QSize
+from PyQt5.QtCore import QSize
 from PyQt5.QtGui import QIcon, QColor
 from PyQt5.QtWidgets import QApplication
 
 from qfluentwidgets import NavigationItemPosition, SplitFluentWindow, SplashScreen
 from qfluentwidgets import FluentIcon as FIF
 
-from .one_fox_v8.webshell_interface import WebshellInterface
-from .setting_interface import SettingInterface
-from ..common.config import cfg
-from ..common.icon import Icon
-from ..common.signal_bus import signalBus
-from ..common import resource
+from app.view.one_fox_v8.webshell_interface import WebshellInterface
+from app.view.setting_interface import SettingInterface
+from app.common.config import cfg
+from app.common.icon import Icon
+from app.common.signal_bus import signalBus
+from app.common import resource
 
 
 class MainWindow(SplitFluentWindow):
@@ -37,7 +37,7 @@ class MainWindow(SplitFluentWindow):
         # self.navigationInterface.setAcrylicEnabled(True)
 
         # TODO: add navigation items
-        self.addSubInterface(self.webshellInterface, FIF.HOME, self.tr('Home'), NavigationItemPosition.SCROLL)
+        self.addSubInterface(self.webshellInterface, FIF.HOME, self.tr('Webshell'), NavigationItemPosition.SCROLL)
 
         # add custom widget to bottom
         self.addSubInterface(
@@ -46,10 +46,10 @@ class MainWindow(SplitFluentWindow):
         self.splashScreen.finish()
 
     def initWindow(self):
-        self.resize(960, 780)
-        self.setMinimumWidth(760)
+        self.resize(880, 600)
+        self.setMinimumWidth(880)
         self.setWindowIcon(QIcon(':/app/images/logo.png'))
-        self.setWindowTitle('WebPenetrationUI')
+        self.setWindowTitle('OneFoxFluentUI - OFF')
 
         self.setCustomBackgroundColor(QColor(240, 244, 249), QColor(32, 32, 32))
         self.setMicaEffectEnabled(cfg.get(cfg.micaEnabled))

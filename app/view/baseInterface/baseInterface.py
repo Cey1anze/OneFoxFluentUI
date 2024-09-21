@@ -69,4 +69,3 @@ class BaseInterface(ScrollArea):
     def registerCardClickHandler(self, index, handler):
         """ Register A Click Handler For Each Card """
         self.cardClickHandlers[index] = handler
-

@@ -1,10 +1,9 @@
 # coding:utf-8
 import os
 import sys
-import PyQt5
 
+import PyQt5
 from PyQt5.QtCore import Qt, QTranslator
-from PyQt5.QtGui import QFont
 from PyQt5.QtWidgets import QApplication
 from qfluentwidgets import FluentTranslator
 

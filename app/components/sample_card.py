@@ -55,7 +55,7 @@ class SampleCardView(QWidget):
         self.vBoxLayout = QVBoxLayout(self)
         self.flowLayout = FlowLayout()
 
-        self.vBoxLayout.setContentsMargins(0, 0, 36, 0)
+        self.vBoxLayout.setContentsMargins(0, 0, 0, 0)
         self.vBoxLayout.setSpacing(10)
         self.flowLayout.setContentsMargins(0, 0, 0, 0)
         self.flowLayout.setHorizontalSpacing(12)

@@ -4,10 +4,9 @@ from enum import Enum
 
 from PyQt5.QtCore import QLocale
 from qfluentwidgets import (qconfig, QConfig, ConfigItem, OptionsConfigItem, BoolValidator,
-                            OptionsValidator, Theme, FolderValidator, ConfigSerializer, ConfigValidator)
+                            OptionsValidator, Theme, ConfigSerializer, ConfigValidator)
 
 from app.common.setting import CONFIG_FILE
-from app.common.utils import resource_path
 
 
 class Language(Enum):
@@ -37,13 +36,11 @@ class Config(QConfig):
     """ Config of application """
 
     # TODO: ADD YOUR CONFIG GROUP HERE
-    defaultJava8Path = resource_path('AppData\\runtime\\Java_path\\Java_8_win\\bin\\java.exe')
-    defaultJava11Path = resource_path('AppData\\runtime\\Java_path\\Java_11_win\\bin\\java.exe')
-    defaultPythonPath = resource_path('AppData\\runtime\\Python_path\\python.exe')
 
-    java8Path = ConfigItem("Runtime", "Java8Path", defaultJava8Path, ConfigValidator())
-    java11Path = ConfigItem("Runtime", "Java11Path", defaultJava11Path, ConfigValidator())
-    pythonPath = ConfigItem("Runtime", "pythonPath", defaultPythonPath, ConfigValidator())
+    isCustomJava = ConfigItem("Runtime", "isCustomJava", False, BoolValidator())
+    isCustomPython = ConfigItem("Runtime", "isCustomPython", False, BoolValidator())
+    customJavaPath = ConfigItem("Runtime", "customJavaPath", '', ConfigValidator())
+    customPythonPath = ConfigItem("Runtime", "customPythonPath", '', ConfigValidator())
 
     # main window
     micaEnabled = ConfigItem("MainWindow", "MicaEnabled", isWin11(), BoolValidator())
