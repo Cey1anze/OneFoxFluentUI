@@ -3,16 +3,17 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QWidget, QLabel, QVBoxLayout, QHBoxLayout
 from qfluentwidgets import IconWidget, TextWrap, FlowLayout, CardWidget
 
-from app.common.signal_bus import signalBus
 from app.common.style_sheet import StyleSheet
 
 
 class SampleCard(CardWidget):
     """ Sample card """
 
-    def __init__(self, icon, title, content, index, parent=None):
+    def __init__(self, icon, title, content, index, localSignalBus, parent=None):
         super().__init__(parent=parent)
         self.index = index
+
+        self.localSignalBus = localSignalBus
 
         self.iconWidget = IconWidget(icon, self)
         self.titleLabel = QLabel(title, self)
@@ -43,7 +44,7 @@ class SampleCard(CardWidget):
 
     def mouseReleaseEvent(self, e):
         super().mouseReleaseEvent(e)
-        signalBus.sampleCardClicked.emit(self.index)  # 发送信号，而不是切换样本
+        self.localSignalBus.sampleCardClicked.emit(self.index)  # 发送信号，而不是切换样本
 
 
 class SampleCardView(QWidget):
@@ -67,7 +68,7 @@ class SampleCardView(QWidget):
         self.titleLabel.setObjectName('viewTitleLabel')
         StyleSheet.SAMPLE_CARD.apply(self)
 
-    def addSampleCard(self, icon, title, content, index):
+    def addSampleCard(self, icon, title, content, index, signalBus):
         """ add sample card """
-        card = SampleCard(icon, title, content, index, self)
+        card = SampleCard(icon, title, content, index, signalBus, self)
         self.flowLayout.addWidget(card)

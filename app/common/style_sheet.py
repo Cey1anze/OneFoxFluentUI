@@ -11,6 +11,7 @@ class StyleSheet(StyleSheetBase, Enum):
     
     SETTING_INTERFACE = "setting_interface"
     WEBSHELL_INTERFACE = "webshell_interface"
+    INFORMATION_COLLECTION_INTERFACE = "information_collection_interface"
     SAMPLE_CARD = "sample_card"
 
     def path(self, theme=Theme.AUTO):

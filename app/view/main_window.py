@@ -7,10 +7,11 @@ from qfluentwidgets import NavigationItemPosition, SplitFluentWindow, SplashScre
 from qfluentwidgets import FluentIcon as FIF
 
 from app.view.one_fox_v8.webshell_interface import WebshellInterface
+from app.view.one_fox_v8.information_collection_interface import InformationCollectionInterface
 from app.view.setting_interface import SettingInterface
 from app.common.config import cfg
 from app.common.icon import Icon
-from app.common.signal_bus import signalBus
+from app.common.signal_bus import globalSignalBus
 from app.common import resource
 
 
@@ -24,6 +25,7 @@ class MainWindow(SplitFluentWindow):
         # self.homeInterface = HomeInterface(self)
         self.settingInterface = SettingInterface(self)
         self.webshellInterface = WebshellInterface(self)
+        self.informationCollectionInterface = InformationCollectionInterface(self)
 
         self.connectSignalToSlot()
 
@@ -31,13 +33,14 @@ class MainWindow(SplitFluentWindow):
         self.initNavigation()
 
     def connectSignalToSlot(self):
-        signalBus.micaEnableChanged.connect(self.setMicaEffectEnabled)
+        globalSignalBus.micaEnableChanged.connect(self.setMicaEffectEnabled)
 
     def initNavigation(self):
         # self.navigationInterface.setAcrylicEnabled(True)
 
         # TODO: add navigation items
         self.addSubInterface(self.webshellInterface, FIF.HOME, self.tr('Webshell'), NavigationItemPosition.SCROLL)
+        self.addSubInterface(self.informationCollectionInterface, FIF.HOME, self.tr('Information Collection'), NavigationItemPosition.SCROLL)
 
         # add custom widget to bottom
         self.addSubInterface(

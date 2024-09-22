@@ -16,6 +16,10 @@ ANTSWORD_PATH = resource_path('AppData\\gui_webshell\\AntSword\\AntSword\\AntSwo
 TIANXIE_PATH = resource_path('AppData\\gui_webshell\\TianXie\\天蝎权限管理工具.jar')
 ALIEN_PATH = resource_path('AppData\\gui_webshell\\alien\\WebShell.exe')
 
+SNOWSHADOW_PATH = resource_path('AppData\\gui_shouji\\leiying\\SnowShadow_v1.0\\SnowShadow.exe')
+WEBFINDER_PATH = resource_path('AppData\\gui_shouji\\webfinder-next.jar')
+
+
 YEAR = 2024
 AUTHOR = "Cey1anze"
 VERSION = "v0.0.1"

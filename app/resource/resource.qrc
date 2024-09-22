@@ -13,6 +13,8 @@
         <file>qss/dark/setting_interface.qss</file>
         <file>qss/light/webshell_interface.qss</file>
         <file>qss/dark/webshell_interface.qss</file>
+        <file>qss/light/information_collection_interface.qss</file>
+        <file>qss/dark/information_collection_interface.qss</file>
         <file>qss/light/sample_card.qss</file>
         <file>qss/dark/sample_card.qss</file>
     </qresource>

@@ -1,7 +1,7 @@
 # coding:utf-8
 from app.common.setting import BEHINDER_PATH, GODZILLA_PATH, ANTSWORD_PATH, TIANXIE_PATH, ALIEN_PATH
 from app.common.style_sheet import StyleSheet
-from app.components.card.one_fox_v8.webshell.webshell_card import webshellCard
+from app.components.card.one_fox_v8.cards import webshellCard
 from app.util.utils import run_command
 from app.view.baseInterface.baseInterface import BaseInterface
 

@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import QWidget, QVBoxLayout
 from qfluentwidgets import (ScrollArea, InfoBar, ExpandLayout, FlowLayout)
 
 from app.common.config import cfg
-from app.common.signal_bus import signalBus
+from app.common.signal_bus import LocalSignalBus
 
 
 def defaultHandler():
@@ -13,13 +13,14 @@ def defaultHandler():
 class BaseInterface(ScrollArea):
     """ Base Interface with customizable layout """
 
-    _signals_connected = False
-
     def __init__(self, parent=None, objectName='', layoutType=None, layoutFunction=None):
         super().__init__(parent=parent)
         self.scrollWidget = QWidget()
         self.scrollWidget.setObjectName('scrollWidget')
         self.cardClickHandlers = {}
+        self._signals_connected = False
+
+        self.localSignalBus = LocalSignalBus()
 
         if layoutType == 'expand':
             self.layout = ExpandLayout(self.scrollWidget)
@@ -38,9 +39,9 @@ class BaseInterface(ScrollArea):
         self.setObjectName(objectName)
         self.__initWidget(layoutFunction)
 
-        if not BaseInterface._signals_connected:
+        if not self._signals_connected:
             self.__connectSignalToSlot()
-            BaseInterface._signals_connected = True
+            self._signals_connected = True
 
     def __initWidget(self, layoutFunction):
         self.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
@@ -60,10 +61,11 @@ class BaseInterface(ScrollArea):
 
     def __connectSignalToSlot(self):
         cfg.appRestartSig.connect(self.__showRestartTooltip)
-        signalBus.sampleCardClicked.connect(self.handleCardClick)
+        self.localSignalBus.sampleCardClicked.connect(self.handleCardClick)
 
     def handleCardClick(self, index):
         handler = self.cardClickHandlers.get(index, defaultHandler)
+        # print(index)
         handler()
 
     def registerCardClickHandler(self, index, handler):

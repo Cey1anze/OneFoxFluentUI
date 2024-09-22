@@ -10,7 +10,7 @@ from qfluentwidgets import (SwitchSettingCard, HyperlinkCard, PrimaryPushSetting
 
 from app.common.config import cfg, isWin11
 from app.common.setting import HELP_URL, FEEDBACK_URL, AUTHOR, VERSION, YEAR
-from app.common.signal_bus import signalBus
+from app.common.signal_bus import globalSignalBus
 from app.common.style_sheet import StyleSheet
 
 
@@ -189,10 +189,10 @@ class SettingInterface(ScrollArea):
 
         # personalization
         cfg.themeChanged.connect(setTheme)
-        self.micaCard.checkedChanged.connect(signalBus.micaEnableChanged)
+        self.micaCard.checkedChanged.connect(globalSignalBus.micaEnableChanged)
 
         # check update
-        self.aboutCard.clicked.connect(signalBus.checkUpdateSig)
+        self.aboutCard.clicked.connect(globalSignalBus.checkUpdateSig)
 
         # about
         self.feedbackCard.clicked.connect(
