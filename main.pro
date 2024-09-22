@@ -1,5 +1,7 @@
-SOURCES += app/view/main_window.py \
+SOURCES += app/components/card/one_fox_v8/webshell/webshell_card.py \
+        app/view/main_window.py \
+        app/view/baseInterface/baseInterface.py \
+        app/view/one_fox_v8/webshell_interface.py \
         app/view/setting_interface.py \
 
-TRANSLATIONS += app/resource/i18n/app.zh_CN.ts \
-                app/resource/i18n/app.zh_HK.ts
+TRANSLATIONS += app/resource/i18n/app.zh_CN.ts

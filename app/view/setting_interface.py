@@ -37,14 +37,14 @@ class SettingInterface(ScrollArea):
         self.javaCard = PushSettingCard(
             text=self.tr('Select'),
             icon=FIF.HELP,
-            title=self.tr('Select Java Path'),
-            content=self.tr('Use your local Java Environment\n(May cause some tools to fail to run)')
+            title=self.tr('Use local Java path'),
+            content=self.tr('May cause some tools to fail to run')
         )
         self.pythonCard = PushSettingCard(
             text=self.tr('Select'),
             icon=FIF.HELP,
-            title=self.tr('Select Python Path'),
-            content=self.tr('Use your local Python Environment\n(May cause some tools to fail to run)')
+            title=self.tr('Use local Python Path'),
+            content=self.tr('May cause some tools to fail to run')
         )
 
         # personalization
@@ -84,7 +84,7 @@ class SettingInterface(ScrollArea):
             FIF.LANGUAGE,
             self.tr('Language'),
             self.tr('Set your preferred language for UI'),
-            texts=['简体中文', '繁體中文', 'English', self.tr('Use system setting')],
+            texts=['简体中文', 'English', self.tr('Use system setting')],
             parent=self.personalGroup
         )
 
@@ -107,19 +107,19 @@ class SettingInterface(ScrollArea):
             FIF.HELP,
             self.tr('Help'),
             self.tr(
-                'Discover new features and learn useful tips about Fluent Client'),
+                'Discover new features and learn useful tips about OneFox Fluent UI'),
             self.aboutGroup
         )
         self.feedbackCard = PrimaryPushSettingCard(
             self.tr('Provide feedback'),
             FIF.FEEDBACK,
             self.tr('Provide feedback'),
-            self.tr('Help us improve Fluent Client by providing feedback'),
+            self.tr('Help me improve OneFox Fluent UI by providing feedback'),
             self.aboutGroup
         )
         self.aboutCard = PrimaryPushSettingCard(
             self.tr('Check update'),
-            ":/qfluentwidgets/images/logo.png",
+            ":/app/images/logo.png",
             self.tr('About'),
             '© ' + self.tr('Copyright') + f" {YEAR}, {AUTHOR}. " +
             self.tr('Version') + " " + VERSION,
