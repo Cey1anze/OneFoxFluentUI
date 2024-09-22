@@ -32,16 +32,31 @@ class WebshellInterface(BaseInterface):
         self.registerCardClickHandler(4, self.runAlien)
 
     def runBehinder(self):
-        run_command(BEHINDER_PATH, 'java', 11)
+        run_command(
+            BEHINDER_PATH,
+            False,
+            'java',
+            11
+        )
 
     def runGodzilla(self):
-        run_command(GODZILLA_PATH, 'java', 11)
+        run_command(
+            GODZILLA_PATH,
+            False,
+            'java',
+            11
+        )
 
     def runAntSword(self):
         run_command(ANTSWORD_PATH)
 
     def runTianXie(self):
-        run_command(TIANXIE_PATH, 'java', 8)
+        run_command(
+            TIANXIE_PATH,
+            False,
+            'java',
+            8
+        )
 
     def runAlien(self):
         run_command(ALIEN_PATH)

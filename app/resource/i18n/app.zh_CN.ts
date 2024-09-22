@@ -114,13 +114,23 @@
     </message>
     <message>
         <location filename="../../components/card/one_fox_v8/cards.py" line="106"/>
+        <source>ENScan</source>
+        <translation>ENScan</translation>
+    </message>
+    <message>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="106"/>
+        <source>A tool based on the information API of major enterprises</source>
+        <translation>一款基于各大企业信息API的工具</translation>
+    </message>
+    <message>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="106"/>
         <source>GOlin</source>
-        <translation>GOlin</translation>
+        <translation type="obsolete">GOlin</translation>
     </message>
     <message>
         <location filename="../../components/card/one_fox_v8/cards.py" line="106"/>
         <source>Equal protection tool</source>
-        <translation>等保工具</translation>
+        <translation type="obsolete">等保工具</translation>
     </message>
 </context>
 <context>

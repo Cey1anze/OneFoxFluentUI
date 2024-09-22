@@ -12,7 +12,7 @@ def is_process_running(process_name, pid=None):
         try:
             if proc.name() == process_name:
                 if pid is None or proc.pid == pid:
-                    return proc.pid  # 返回找到的进程 PID
+                    return proc.pid
 
             if process_name.endswith('.jar'):
                 if any(arg.endswith(process_name) for arg in proc.cmdline()):
@@ -27,7 +27,7 @@ def is_process_running(process_name, pid=None):
     return None
 
 
-def run_command(command: str, runtime_type: str = None, java_version: int = None, *args):
+def run_command(command: str, shell=False, runtime_type: str = None, java_version: int = None, *args):
     isCustomJava = cfg.get(cfg.isCustomJava)
     isCustomPython = cfg.get(cfg.isCustomPython)
     customJavaPath = cfg.get(cfg.customJavaPath)
@@ -60,7 +60,7 @@ def run_command(command: str, runtime_type: str = None, java_version: int = None
 
         command_to_run.extend(args)
 
-        process = subprocess.Popen(command_to_run, cwd=executable_path, shell=False)
+        process = subprocess.Popen(command_to_run, cwd=executable_path, shell=shell)
 
         return process
 

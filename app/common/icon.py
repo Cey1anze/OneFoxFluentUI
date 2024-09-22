@@ -10,6 +10,10 @@ class Icon(FluentIconBase, Enum):
 
     SETTINGS = "Settings"
     SETTINGS_FILLED = "SettingsFilled"
+    PYTHON = "python"
+    JAVA = "java"
+    WEBSHELL = "webshell"
+    INFORMATION_COLLECTION = "information_collection"
 
     def path(self, theme=Theme.AUTO):
         return f":/app/images/icons/{self.value}_{getIconColor(theme)}.svg"

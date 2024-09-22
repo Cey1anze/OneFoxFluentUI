@@ -21,17 +21,14 @@ WEBFINDER_PATH = resource_path('AppData\\gui_shouji\\webfinder-next.jar')
 YUJIAN_PATH = resource_path('AppData\\gui_shouji\\yjdirscanv1.1\\御剑2.exe')
 TIDE_PATH = resource_path('AppData\\gui_shouji\\tide\\TideFinger_Win.exe')
 MULTIPLEPUPILS_PATH = resource_path('AppData\\gui_shouji\\fofaviewer\\MultiplePupils.exe')
-GOLIN_PATH = resource_path('AppData\\gui_shouji\\golin\\golin.exe')
+ENSCAN_PATH = resource_path('AppData\\gui_shouji\\enscan\\enscan-0.0.15-windows-amd64.exe')
 
 
 YEAR = 2024
 AUTHOR = "Cey1anze"
 VERSION = "v0.0.1"
-APP_NAME = "OFF"
-HELP_URL = "https://qfluentwidgets.com"
-REPO_URL = "https://github.com/zhiyiYo/PyQt-Fluent-Widgets"
-FEEDBACK_URL = "https://github.com/zhiyiYo/PyQt-Fluent-Widgets/issues"
-DOC_URL = "https://qfluentwidgets.com/"
+HELP_URL = "https://github.com/Cey1anze/OneFoxFluentUI"
+FEEDBACK_URL = "https://github.com/Cey1anze/OneFoxFluentUI/issues"
 
 CONFIG_FOLDER = Path('AppData').absolute()
 CONFIG_FILE = CONFIG_FOLDER / "config.json"

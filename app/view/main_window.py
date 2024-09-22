@@ -39,8 +39,8 @@ class MainWindow(SplitFluentWindow):
         # self.navigationInterface.setAcrylicEnabled(True)
 
         # TODO: add navigation items
-        self.addSubInterface(self.webshellInterface, FIF.HOME, self.tr('Webshell'), NavigationItemPosition.SCROLL)
-        self.addSubInterface(self.informationCollectionInterface, FIF.HOME, self.tr('Information Collection'), NavigationItemPosition.SCROLL)
+        self.addSubInterface(self.webshellInterface, Icon.WEBSHELL, self.tr('Webshell'), NavigationItemPosition.SCROLL)
+        self.addSubInterface(self.informationCollectionInterface, Icon.INFORMATION_COLLECTION, self.tr('Information Collection'), NavigationItemPosition.SCROLL)
 
         # add custom widget to bottom
         self.addSubInterface(

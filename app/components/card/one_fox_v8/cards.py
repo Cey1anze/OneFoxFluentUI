@@ -7,7 +7,7 @@ def webshellCard(self):
         self.tr("Webshell"), self.scrollWidget)
 
     webshellView.addSampleCard(
-        icon=":/gallery/images/controls/Button.png",
+        icon=":/app/images/icons/Button.png",
         title=self.tr("Behinder"),
         content=self.tr(
             '"Behinder" dynamic binary encryption website management client'),
@@ -16,7 +16,7 @@ def webshellCard(self):
     )
 
     webshellView.addSampleCard(
-        icon=":/gallery/images/controls/Button.png",
+        icon=":/app/images/icons/Button.png",
         title=self.tr("Godzilla"),
         content=self.tr(
             "Godzilla"),
@@ -25,7 +25,7 @@ def webshellCard(self):
     )
 
     webshellView.addSampleCard(
-        icon=":/gallery/images/controls/Button.png",
+        icon=":/app/images/icons/antsword.png",
         title=self.tr("AntSword"),
         content=self.tr(
             "AntSword is a cross-platform open source website management tool"),
@@ -34,7 +34,7 @@ def webshellCard(self):
     )
 
     webshellView.addSampleCard(
-        icon=":/gallery/images/controls/Button.png",
+        icon=":/app/images/icons/Button.png",
         title=self.tr("TianXie"),
         content=self.tr(
             "Rights Management Tools"),
@@ -43,7 +43,7 @@ def webshellCard(self):
     )
 
     webshellView.addSampleCard(
-        icon=":/gallery/images/controls/Button.png",
+        icon=":/app/images/icons/alien.ico",
         title=self.tr("Alien"),
         content=self.tr(
             "Trojan management tool"),
@@ -60,7 +60,7 @@ def informationCollectionCard(self):
         self.tr("Information Collection"), self.scrollWidget)
 
     informationCollectionView.addSampleCard(
-        icon=":/gallery/images/controls/Button.png",
+        icon=":/app/images/icons/Button.png",
         title=self.tr("Snow Shadow"),
         content=self.tr('IP address query, port scan, C segment survival scan, background directory scan'),
         index=5,
@@ -68,7 +68,7 @@ def informationCollectionCard(self):
     )
 
     informationCollectionView.addSampleCard(
-        icon=":/gallery/images/controls/Button.png",
+        icon=":/app/images/icons/Button.png",
         title=self.tr("Web Finder - Next"),
         content=self.tr(
             "A small tool to quickly identify ports and services"),
@@ -77,7 +77,7 @@ def informationCollectionCard(self):
     )
 
     informationCollectionView.addSampleCard(
-        icon=":/gallery/images/controls/Button.png",
+        icon=":/app/images/icons/yujian.ico",
         title=self.tr("Yu Jian"),
         content=self.tr(
             "Simple and practical command line website directory scanning tool"),
@@ -86,7 +86,7 @@ def informationCollectionCard(self):
     )
 
     informationCollectionView.addSampleCard(
-        icon=":/gallery/images/controls/Button.png",
+        icon=":/app/images/icons/Button.png",
         title=self.tr("Tide Finger"),
         content=self.tr(
             "Fingerprint recognition gadget"),
@@ -95,7 +95,7 @@ def informationCollectionCard(self):
     )
 
     informationCollectionView.addSampleCard(
-        icon=":/gallery/images/controls/Button.png",
+        icon=":/app/images/icons/fofafinder.ico",
         title=self.tr("Multiple Pupils"),
         content=self.tr(
             "Asset collection tool, supporting Quake, Fofa, Hunter and other asset mapping platform API"),
@@ -104,10 +104,10 @@ def informationCollectionCard(self):
     )
 
     informationCollectionView.addSampleCard(
-        icon=":/gallery/images/controls/Button.png",
-        title=self.tr("GOlin"),
+        icon=":/app/images/icons/Button.png",
+        title=self.tr("ENScan"),
         content=self.tr(
-            "Equal protection tool"),
+            "A tool based on the information API of major enterprises"),
         index=10,
         signalBus=self.localSignalBus
     )

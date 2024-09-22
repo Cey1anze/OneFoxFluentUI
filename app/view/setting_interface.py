@@ -9,6 +9,7 @@ from qfluentwidgets import (SwitchSettingCard, HyperlinkCard, PrimaryPushSetting
                             ComboBoxSettingCard, ExpandLayout, setTheme, setFont)
 
 from app.common.config import cfg, isWin11
+from app.common.icon import Icon
 from app.common.setting import HELP_URL, FEEDBACK_URL, AUTHOR, VERSION, YEAR
 from app.common.signal_bus import globalSignalBus
 from app.common.style_sheet import StyleSheet
@@ -36,13 +37,13 @@ class SettingInterface(ScrollArea):
             self.tr('Runtime'), self.scrollWidget)
         self.javaCard = PushSettingCard(
             text=self.tr('Select'),
-            icon=FIF.HELP,
+            icon=Icon.JAVA,
             title=self.tr('Use local Java path'),
             content=self.tr('May cause some tools to fail to run')
         )
         self.pythonCard = PushSettingCard(
             text=self.tr('Select'),
-            icon=FIF.HELP,
+            icon=Icon.PYTHON,
             title=self.tr('Use local Python Path'),
             content=self.tr('May cause some tools to fail to run')
         )
