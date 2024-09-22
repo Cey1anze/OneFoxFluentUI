@@ -18,6 +18,10 @@ ALIEN_PATH = resource_path('AppData\\gui_webshell\\alien\\WebShell.exe')
 
 SNOWSHADOW_PATH = resource_path('AppData\\gui_shouji\\leiying\\SnowShadow_v1.0\\SnowShadow.exe')
 WEBFINDER_PATH = resource_path('AppData\\gui_shouji\\webfinder-next.jar')
+YUJIAN_PATH = resource_path('AppData\\gui_shouji\\yjdirscanv1.1\\御剑2.exe')
+TIDE_PATH = resource_path('AppData\\gui_shouji\\tide\\TideFinger_Win.exe')
+MULTIPLEPUPILS_PATH = resource_path('AppData\\gui_shouji\\fofaviewer\\MultiplePupils.exe')
+GOLIN_PATH = resource_path('AppData\\gui_shouji\\golin\\golin.exe')
 
 
 YEAR = 2024

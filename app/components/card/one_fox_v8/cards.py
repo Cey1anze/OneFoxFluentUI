@@ -62,7 +62,7 @@ def informationCollectionCard(self):
     informationCollectionView.addSampleCard(
         icon=":/gallery/images/controls/Button.png",
         title=self.tr("Snow Shadow"),
-        content=self.tr(''),
+        content=self.tr('IP address query, port scan, C segment survival scan, background directory scan'),
         index=5,
         signalBus=self.localSignalBus
     )
@@ -71,7 +71,7 @@ def informationCollectionCard(self):
         icon=":/gallery/images/controls/Button.png",
         title=self.tr("Web Finder - Next"),
         content=self.tr(
-            ""),
+            "A small tool to quickly identify ports and services"),
         index=6,
         signalBus=self.localSignalBus
     )
@@ -80,7 +80,7 @@ def informationCollectionCard(self):
         icon=":/gallery/images/controls/Button.png",
         title=self.tr("Yu Jian"),
         content=self.tr(
-            ""),
+            "Simple and practical command line website directory scanning tool"),
         index=7,
         signalBus=self.localSignalBus
     )
@@ -89,7 +89,7 @@ def informationCollectionCard(self):
         icon=":/gallery/images/controls/Button.png",
         title=self.tr("Tide Finger"),
         content=self.tr(
-            ""),
+            "Fingerprint recognition gadget"),
         index=8,
         signalBus=self.localSignalBus
     )
@@ -98,26 +98,17 @@ def informationCollectionCard(self):
         icon=":/gallery/images/controls/Button.png",
         title=self.tr("Multiple Pupils"),
         content=self.tr(
-            ""),
+            "Asset collection tool, supporting Quake, Fofa, Hunter and other asset mapping platform API"),
         index=9,
         signalBus=self.localSignalBus
     )
 
     informationCollectionView.addSampleCard(
         icon=":/gallery/images/controls/Button.png",
-        title=self.tr("Tide Finger"),
+        title=self.tr("GOlin"),
         content=self.tr(
-            ""),
+            "Equal protection tool"),
         index=10,
-        signalBus=self.localSignalBus
-    )
-
-    informationCollectionView.addSampleCard(
-        icon=":/gallery/images/controls/Button.png",
-        title=self.tr("Multiple Pupils"),
-        content=self.tr(
-            ""),
-        index=11,
         signalBus=self.localSignalBus
     )
 

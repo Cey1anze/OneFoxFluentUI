@@ -1,1 +1,8 @@
 PyQt-Fluent-Widgets>=1.5.5
+psutil~=6.0.0
+PyQt5~=5.15.11
+numpy~=2.1.1
+pywin32~=306
+pillow~=10.4.0
+pip~=24.2
+typing_extensions~=4.12.2

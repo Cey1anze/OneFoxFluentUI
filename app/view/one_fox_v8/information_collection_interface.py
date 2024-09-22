@@ -1,6 +1,6 @@
 # coding:utf-8
-from app.common.setting import ANTSWORD_PATH, TIANXIE_PATH, ALIEN_PATH, SNOWSHADOW_PATH, \
-    WEBFINDER_PATH
+from app.common.setting import SNOWSHADOW_PATH, \
+    WEBFINDER_PATH, YUJIAN_PATH, TIDE_PATH, MULTIPLEPUPILS_PATH, GOLIN_PATH
 from app.common.style_sheet import StyleSheet
 from app.components.card.one_fox_v8.cards import informationCollectionCard
 from app.util.utils import run_command
@@ -25,12 +25,12 @@ class InformationCollectionInterface(BaseInterface):
         self.layout.addWidget(informationCollectionView)
 
     def register(self):
-        # 注册每个卡片的点击处理函数
         self.registerCardClickHandler(5, self.runSnowShadow)
         self.registerCardClickHandler(6, self.runWebFinder)
-        self.registerCardClickHandler(7, self.runAntSword)
-        self.registerCardClickHandler(8, self.runTianXie)
-        self.registerCardClickHandler(9, self.runAlien)
+        self.registerCardClickHandler(7, self.runYuJian)
+        self.registerCardClickHandler(8, self.runTide)
+        self.registerCardClickHandler(9, self.runMultiplePupils)
+        self.registerCardClickHandler(10, self.runGOlin)
 
     def runSnowShadow(self):
         run_command(SNOWSHADOW_PATH)
@@ -38,11 +38,14 @@ class InformationCollectionInterface(BaseInterface):
     def runWebFinder(self):
         run_command(WEBFINDER_PATH, 'java', 8)
 
-    def runAntSword(self):
-        run_command(ANTSWORD_PATH)
+    def runYuJian(self):
+        run_command(YUJIAN_PATH)
 
-    def runTianXie(self):
-        run_command(TIANXIE_PATH, 'java', 8)
+    def runTide(self):
+        run_command(TIDE_PATH)
 
-    def runAlien(self):
-        run_command(ALIEN_PATH)
+    def runMultiplePupils(self):
+        run_command(MULTIPLEPUPILS_PATH)
+
+    def runGOlin(self):
+        run_command(GOLIN_PATH, None, None, 'web')

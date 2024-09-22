@@ -4,60 +4,129 @@
 <context>
     <name>WebshellInterface</name>
     <message>
-        <location filename="../../components/card/one_fox_v8/webshell/webshell_card.py" line="6"/>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="6"/>
         <source>Webshell</source>
         <translation>Webshell</translation>
     </message>
     <message>
-        <location filename="../../components/card/one_fox_v8/webshell/webshell_card.py" line="9"/>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="9"/>
         <source>Behinder</source>
         <translation>冰蝎</translation>
     </message>
     <message>
-        <location filename="../../components/card/one_fox_v8/webshell/webshell_card.py" line="9"/>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="9"/>
         <source>&quot;Behinder&quot; dynamic binary encryption website management client</source>
         <translation>“冰蝎”动态二进制加密网站管理客户端</translation>
     </message>
     <message>
-        <location filename="../../components/card/one_fox_v8/webshell/webshell_card.py" line="17"/>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="18"/>
         <source>Godzilla</source>
         <translation>哥斯拉</translation>
     </message>
     <message>
-        <location filename="../../components/card/one_fox_v8/webshell/webshell_card.py" line="25"/>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="27"/>
         <source>AntSword</source>
         <translation>蚁剑</translation>
     </message>
     <message>
-        <location filename="../../components/card/one_fox_v8/webshell/webshell_card.py" line="25"/>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="27"/>
         <source>AntSword is a cross-platform open source website management tool</source>
         <translation>中国蚁剑是一款跨平台的开源网站管理工具</translation>
     </message>
     <message>
-        <location filename="../../components/card/one_fox_v8/webshell/webshell_card.py" line="33"/>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="36"/>
         <source>TianXie</source>
         <translation>天蝎</translation>
     </message>
     <message>
-        <location filename="../../components/card/one_fox_v8/webshell/webshell_card.py" line="33"/>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="36"/>
         <source>Rights Management Tools</source>
         <translation>权限管理工具</translation>
     </message>
     <message>
-        <location filename="../../components/card/one_fox_v8/webshell/webshell_card.py" line="41"/>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="45"/>
         <source>Alien</source>
         <translation>Alien</translation>
     </message>
     <message>
-        <location filename="../../components/card/one_fox_v8/webshell/webshell_card.py" line="41"/>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="45"/>
         <source>Trojan management tool</source>
         <translation>一句话木马管理工具</translation>
     </message>
 </context>
 <context>
+    <name>InformationCollectionInterface</name>
+    <message>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="59"/>
+        <source>Information Collection</source>
+        <translation>信息收集</translation>
+    </message>
+    <message>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="62"/>
+        <source>Snow Shadow</source>
+        <translation>雪影</translation>
+    </message>
+    <message>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="62"/>
+        <source>IP address query, port scan, C segment survival scan, background directory scan</source>
+        <translation>IP查询，端口扫描，C段存活扫描，后台目录扫描</translation>
+    </message>
+    <message>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="70"/>
+        <source>Web Finder - Next</source>
+        <translation>Web Finder - Next</translation>
+    </message>
+    <message>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="70"/>
+        <source>A small tool to quickly identify ports and services</source>
+        <translation>一款快速识别端口及服务的小工具</translation>
+    </message>
+    <message>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="79"/>
+        <source>Yu Jian</source>
+        <translation>御剑</translation>
+    </message>
+    <message>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="79"/>
+        <source>Simple and practical command line website directory scanning tool</source>
+        <translation>简单实用的命令行网站目录扫描工具</translation>
+    </message>
+    <message>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="88"/>
+        <source>Tide Finger</source>
+        <translation>Tide Finger</translation>
+    </message>
+    <message>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="88"/>
+        <source>Fingerprint recognition gadget</source>
+        <translation>指纹识别小工具</translation>
+    </message>
+    <message>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="97"/>
+        <source>Multiple Pupils</source>
+        <translation>Multiple Pupils</translation>
+    </message>
+    <message>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="97"/>
+        <source>Asset collection tool, supporting Quake, Fofa, Hunter and other asset mapping platform API</source>
+        <translation>资产收集的工具，支持Quake、Fofa、Hunter等
+资产测绘平台API接口</translation>
+    </message>
+    <message>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="106"/>
+        <source>GOlin</source>
+        <translation>GOlin</translation>
+    </message>
+    <message>
+        <location filename="../../components/card/one_fox_v8/cards.py" line="106"/>
+        <source>Equal protection tool</source>
+        <translation>等保工具</translation>
+    </message>
+</context>
+<context>
     <name>BaseInterface</name>
     <message>
-        <location filename="../../view/baseInterface/baseInterface.py" line="55"/>
+        <location filename="../../view/baseInterface/baseInterface.py" line="56"/>
         <source>Configuration takes effect after restart</source>
         <translation>配置在重启后生效</translation>
     </message>
@@ -65,14 +134,19 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../../view/main_window.py" line="40"/>
+        <location filename="../../view/main_window.py" line="42"/>
         <source>Webshell</source>
         <translation>Webshell</translation>
     </message>
     <message>
-        <location filename="../../view/main_window.py" line="43"/>
+        <location filename="../../view/main_window.py" line="46"/>
         <source>Settings</source>
         <translation>设置</translation>
+    </message>
+    <message>
+        <location filename="../../view/main_window.py" line="43"/>
+        <source>Information Collection</source>
+        <translation>信息收集</translation>
     </message>
 </context>
 <context>
